@@ -1,0 +1,49 @@
+body{text-align:center;}
+.btn1_div{
+    background-color:pink;
+    height:100px;
+    margin-bottom:100px;
+}
+.btn2_div{
+    background-color:skyblue;
+    height:100px;
+}
+
+.btn1{
+    height:50px;
+    width:100px;
+    margin:20px;
+    background-color:yellow;
+    text-align:right;
+    font-size:20px;
+}
+
+.btn2{
+    height:50px;
+    width:100px;
+    margin:20px;
+    background-color:green;
+    text-align:right;
+    font-size:20px;
+    ma
+}
+
+.input{
+    font-size:20px;
+    line-height:2em;
+}
+
+.open{
+    height:50px;
+    width:100px;
+    margin-top:30px;
+}
+
+.a_css{
+    line-height:5em;
+}
+
+.a_css:hover{
+    text-decoration:underline;
+    cursor:pointer;
+}
