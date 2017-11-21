@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dice_game</title>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato:100,300,600">
+    <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/form.css">
+</head>
+<body>
+    <!--form: 서버로 보내는 것 기본적 틀-->
+    <div>
+        <form method="POST" action="server_send.py" name="frm" onsubmit="return check();"> <!--return check(); : 체크함수를 리턴하라-->
+            <div>
+                가입 신청서에 *란은 필수입니다.
+            </div>
+            <div class="div_height">
+                <input type="text" name="name" id="name" placeholder="이름">*
+                <p id="name_error" class="p_error"></p>
+            </div>
+            <div class="div_height">
+                <input type="text" name="id" id="id" placeholder="아이디">*
+            </div>
+            <div class="div_height">
+                <input type="password" name="password" id="password" placeholder="비밀번호">*
+            </div>
+            <div class="div_height">
+                <input type="password" name="password2" id="password2" placeholder="비밀번호 확인">*
+            </div>
+            <div class="div_height">
+                <input type="submit" value="회원가입">
+                <input type="reset" value="다시쓰기">
+            </div>
+        </form>
+    </div>
+    <script type="text/javascript" src="./js/form.js"></script>
+</body>
+</html>
