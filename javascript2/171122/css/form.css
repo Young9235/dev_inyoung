@@ -1,0 +1,16 @@
+.div_height{
+    margin-top:10px;
+}
+
+form{
+    text-align:center;
+}
+
+form > div{
+    font-size:20px;
+}
+
+.p_error{
+    color:#eb4d4d;
+    font-size:10px;
+}
