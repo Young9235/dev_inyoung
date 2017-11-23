@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>jq</title>
+    <script src="./js/jquery-3.2.1.min.js"></script>
+    <style>
+        body{
+            font-size: 15px;
+        }
+        div, p, ul, li{
+            border:1px #eee solid;
+            margin:10px;
+        }
+        ul{
+            padding:10px;
+        }
+
+    </style>
+    <script>
+    /*
+    $(document).ready(function(){
+            //여기에 문제를 푸세요
+        $('ul.menu').children().nextAll().css('border','4px solid #f00');
+        }
+    );
+    */
+    /*
+    $(document).ready(function(){
+            //여기에 문제를 푸세요
+            var $samplePage = $('#samplePage');
+            $samplePage.children().last().css('background','pink');              //배경 핑크
+            $samplePage.find('p').nextAll().css('background','blue');            //배경 블루
+            $samplePage.css('border','4px solid #f00');                     //보더선 변경
+            $samplePage.children().children().children().eq(3).css('background','yellow');      //배경 노랑
+        }
+    );
+    */
+    $(document).ready(function(){
+            //여기에 문제를 푸세요
+            var len = $('li').length;
+            alert('li의 수는: ' + len);
+        }
+    );
+
+    </script>
+</head>
+<body>
+    <div id="samplePage" class="page">
+        샘플페이지(div, id=samplePage, class=page)
+        <div >
+            헤더 영역(div)
+             <ul>
+                일반 노드 찾기
+                <li>id로 찾기(li)</li>
+                <li class="select">class로 찾기(li, class=select)</li>
+             </ul>
+        </div>
+        <div>
+            노드 찾기(div)
+            <ul>
+                일반 노드 찾기
+                <li>id로 찾기(li)</li>
+                <li class="select">class로 찾기(li, class=select)</li>
+                <li>class로 찾기</li>
+                <li class="test1">class로 찾기(li, class=test1)</li>
+            </ul>
+            <div>
+                자식 노드 찾기(div,class=content-data)
+                <p class="test1">1. 모든 자식 노드 찾기(p, class=test1)</p>
+                <p>1. 모든 자식 노드 찾기</p>
+                <p class="test2">1. 모든 자식 노드 찾기 (p, class=test2)</p>
+            </div>
+
+        </div>
+        <div>
+            <p>푸터 영역(footer)</p>
+        </div>
+
+    </div>
+</body>
+</html>

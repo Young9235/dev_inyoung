@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>jq</title>
+    <script src="./js/jquery-3.2.1.min.js"></script>
+    <script>
+        /*
+        $(document).ready(function(){
+            $('ul li').each(function(index){         //index : 익명함수
+            console.log(index + this);
+            });
+        });
+        */
+
+        // 옳은 것
+        /*
+        $(document).ready(function(){
+            $('ul li').each(function(index){
+                var $target = $(this);
+                $target.css('background','pink');
+            });
+        });
+
+        //this는 자바스크립트 객체이기 때문에 실행 안됨
+        $(document).ready(function(){
+            $('ul li').each(function(index){
+                var target = this;
+                target.css('background','pink');
+            });
+        });
+        */
+
+    </script>
+</head>
+<body>
+    <ul>
+        <li>hello world</li>
+        <li class="select">hello world</li>
+        <li>hello world</li>
+    </ul>
+</body>
+</html>

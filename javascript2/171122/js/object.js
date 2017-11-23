@@ -103,7 +103,7 @@ document.write(text);
 */
 
 function display(birth){
-    var now = new Date;
+    //var now = new Date;
     var age = now.getFullYear() - birth;
     alert(age+'세 입니다.');
     }
