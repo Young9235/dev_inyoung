@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jq</title>
+    <script src="./js/jquery-3.2.1.min.js"></script>
+    <script>
+        /*
+        $(document).ready(function() {
+            $('div').eq(0).find('li:odd').text('hello world');
+            $('div').eq(1).find('li:even').text('안녕하세요');
+        });
+        */
+        $(document).ready(function() {
+            $('div').eq(0).find('div').html('<h1>hello world</h1>');
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <div></div>
+    </div>
+    <div></div>
+</body>
+</html>

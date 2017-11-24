@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jq</title>
+    <style>
+    </style>
+    <script src="./js/jquery-3.2.1.min.js"></script>
+    <script>
+        /*
+        $(document).ready(function() {
+            $('div').children().each(function(index){
+                $(this).html('<h1>hello world' + index + '</h1>');
+            })
+        });
+        */
+
+
+        $(document).ready(function() {
+        var $image = $('img');
+        var source = ['./img/boating.jpg', './img/morning.jpg'];
+            $image.each(function(index){
+                $(this).attr('src', source[index]);
+            })
+        });
+
+
+    </script>
+</head>
+<body>
+    <ul>
+        <li><img></li>
+        <li><img></li>
+    </ul>
+</body>
+</html>

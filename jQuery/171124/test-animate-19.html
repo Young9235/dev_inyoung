@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jq</title>
+    <style>
+    </style>
+    <script src="./js/jquery-3.2.1.min.js"></script>
+    <script>
+        /*
+        $(document).ready(function() {
+        var $image = $('img');
+        var source = ['./img/boating.jpg', './img/morning.jpg'];
+            $image.each(function(index){
+                $(this).attr('src', source[index]);
+            })
+        });
+        */
+
+        $(document).ready(function() {
+        var $list = $('li');
+
+            var href=['http://www.naver.com', 'http://www.daum.net', 'http://www.google.com']
+            $list.each(function(index){
+                var link_site = ['네이버', '다음', '구글']
+                $(this).html('<a>' + link_site[index] + '</a>');
+                $(this).children().attr('href',href[index]);
+            });
+        });
+
+
+    </script>
+</head>
+<body>
+    <ul>
+        <li><a></a></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jq</title>
+
+    <style>
+        .test{
+            position: absolute;
+            width:100px;
+            height: 100px;
+            background-color:pink;
+        }
+        #one{background:blue;}
+        #two{right:0; top:100px;}
+    </style>
+    <script src="./js/jquery-3.2.1.min.js"></script>
+    <script>
+
+        $(document).ready(function() {
+            $('#one').animate({
+                'right':'0'
+            },1000, function(){
+                $('#two').animate({
+                    'left':'0'
+                },1000)
+            })
+        });
+
+    </script>
+</head>
+<body>
+    <div class="test" id="one">hello world one</div>
+    <div class="test" id="two">hello world two</div>
+</body>
+</html>

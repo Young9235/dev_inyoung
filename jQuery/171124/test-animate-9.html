@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jq</title>
+    <style>
+        .hello{
+            position:relative;
+            width:100px;
+            height:100px;
+            background-color: black;
+            color:white;
+        }
+        #two{
+            position:absolute;
+            left:50%;
+        }
+
+    </style>
+    <script src="./js/jquery-3.2.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.hello').animate({
+                left:'400px'
+            },1000);
+            $('.test').css({
+                'background':'green',
+                'border':'1px solid red',
+                'color':'#fff',
+                'width':'50%',
+                'float':'left',
+            })
+        });
+    </script>
+</head>
+<body>
+    <div class="hello">hello</div>
+    <div class="test" id="one">
+        <img src="./img/boating.jpg" width="400">
+        <h1>보트 그림</h1>
+    </div>
+    <div class="test" id="two">
+        <img src="./img/morning.jpg" width="400">
+        <h1>산책 그림</h1>
+    </div>
+</body>
+</html>

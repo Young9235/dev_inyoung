@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jq</title>
+    <style>
+    </style>
+    <script src="./js/jquery-3.2.1.min.js"></script>
+    <script>
+        /*
+        $(document).ready(function() {
+            $('div').eq(0).find('div').html('<h1>hello world</h1>');
+        });
+        */
+        $(document).ready(function() {
+            $('div').children().each(function(index){
+                $(this).html('<h1>hello world ' + index + '</h1>');
+            })
+        });
+
+    </script>
+</head>
+<body>
+    <div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div></div>
+</body>
+</html>

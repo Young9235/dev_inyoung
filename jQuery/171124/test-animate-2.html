@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jq</title>
+
+    <style>
+        .test{
+            width:400px;
+            height: 400px;
+            background-color:pink;
+        }
+        #two{display:none;}
+    </style>
+    <script src="./js/jquery-3.2.1.min.js"></script>
+    <script>
+        /*$(document).ready(function(){
+            $('#one').show(1000).css({
+                'background':'blue'
+            });
+            $('#two').hide(1000);
+        });
+        */
+        $(document).ready(function() {
+            $('#one').slideUp(1000).css('background','blue');
+            $('#two').slideDown(1000);
+        });
+
+    </script>
+</head>
+<body>
+    <div class="test" id="one">hello world one</div>
+    <div class="test" id="two">hello world two</div>
+</body>
+</html>

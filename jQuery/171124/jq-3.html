@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jq</title>
+
+    <style>
+        #test1{
+            display:none;
+            width:400px;
+            height:400px;
+            margin:0 auto;
+            background:pink;
+        }
+    </style>
+    <script src="./js/jquery-3.2.1.min.js"></script>
+    <script>
+        /*
+        $(document).ready(function(){
+            $('#test1').fadeIn(2000);
+        });
+        */
+        /*
+        $(document).ready(function(){
+            $('#test1').fadeOut(2000);
+        });
+        */
+
+        $(document).ready(function(){
+            $('#test1').slideDown(3000);
+        });
+
+
+
+    </script>
+</head>
+<body>
+    <div id ="test1">hello world</div>
+</body>
+</html>

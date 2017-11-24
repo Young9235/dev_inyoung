@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jq</title>
+    <style>
+    </style>
+    <script src="./js/jquery-3.2.1.min.js"></script>
+    <script>
+        /*
+        $(document).ready(function() {
+            $('div').children().each(function(index){
+                $(this).html('<h1>hello world' + index + '</h1>');
+            })
+        });
+        */
+        $(document).ready(function() {
+            $('ul li').last().prevAll().empty();
+        });
+
+    </script>
+</head>
+<body>
+    <ul>
+        <li>hello world</li>
+        <li>hello world</li>
+        <li>hello world</li>
+        <li>hello world</li>
+        <li>hello world</li>
+    </ul>
+    <div></div>
+</body>
+</html>

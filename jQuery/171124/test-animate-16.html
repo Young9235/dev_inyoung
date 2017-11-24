@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jq</title>
+    <style>
+    </style>
+    <script src="./js/jquery-3.2.1.min.js"></script>
+    <script>
+        /*
+        $(document).ready(function() {
+            $('div').children().each(function(index){
+                $(this).html('<h1>hello world' + index + '</h1>');
+            })
+        });
+        */
+
+        $(document).ready(function(){
+            $('ul').eq(1).find('.select').prev().empty();
+            $('ul').eq(1).find('.select').next().empty();
+        });
+
+    </script>
+</head>
+<body>
+    <ul>
+        <li>hello world</li>
+        <li>hello world</li>
+        <li>hello world</li>
+        <li>hello world</li>
+        <li>hello world</li>
+    </ul>
+     <ul>
+        <li>hello world</li>
+        <li>hello world</li>
+        <li class="select">hello world</li>
+        <li>hello world</li>
+        <li>hello world</li>
+    </ul>
+</body>
+</html>
