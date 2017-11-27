@@ -1,0 +1,24 @@
+/*
+    Font Family:robo
+    Steel Gray : #41464b (button, icon, link)
+    Greenish Blue : #34c6d3 (Headings)
+    Blue Bayoux : #64707b (Paragrap)
+
+*/
+
+body{
+    font-family:'Shadows Into Light', cursive;
+}
+
+.col-1{
+    background:red;
+}
+.col-2{
+    background:orange;
+}
+.col-3{
+    background:yellow;
+}
+.col-4{
+    background:green;
+}

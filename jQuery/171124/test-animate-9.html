@@ -11,10 +11,6 @@
             background-color: black;
             color:white;
         }
-        #two{
-            position:absolute;
-            left:50%;
-        }
 
     </style>
     <script src="./js/jquery-3.2.1.min.js"></script>
@@ -22,14 +18,17 @@
         $(document).ready(function(){
             $('.hello').animate({
                 left:'400px'
-            },1000);
+            },1000, function(){
             $('.test').css({
                 'background':'green',
                 'border':'1px solid red',
                 'color':'#fff',
-                'width':'50%',
-                'float':'left',
+                'width':'45%',
+                'float':'left'
             })
+
+            });
+
         });
     </script>
 </head>
