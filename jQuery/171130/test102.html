@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>quiz102</title>
+    <script src="./js/jquery-3.2.1.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        var color = ['pink', 'orange', 'yellow', 'green', 'blue', '#F40923', '#345678'];
+        $('.menu').mouseenter(function(event){
+            $('.menu').css('background',color[0]);
+            $('.menu').find('li').each(function(index){
+                $(this).css('background', color[index+1]);
+            });
+        });
+    });
+    </script>
+</head>
+<body>
+    <ul class="menu">
+        <li>menu1</li>
+        <li>menu2</li>
+        <li>menu3</li>
+        <li>menu4</li>
+        <li>menu5</li>
+        <li>menu6</li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #basket{ background: pink; padding:10px; }
+        #apple{ background: green; margin: 5px; }
+        #banana{ background: yellow; margin: 5px; }
+        #orange{ background: orange; margin: 5px; }
+    </style>
+    <script src="./js/jquery-3.2.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#basket').append($('#apple'));
+            $('#basket').append($('#banana'));
+            $('#basket').append($('#orange'));
+        });
+    </script>
+</head>
+<body>
+    <div id="basket">basket</div>
+    <div id="apple">apple</div>
+    <div id="banana">banana</div>
+    <div id="orange">orange</div>
+</body>
+</html>

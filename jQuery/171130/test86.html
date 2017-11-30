@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>quiz86</title>
+    <script src="./js/jquery-3.2.1.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        var $el = $('ul:eq(0)').find('li').last();
+        var color_value = $el.css('color');
+        var font_size_value = $el.css('font-size');
+        var ind = $el.index();
+
+        $('ul:eq(1) li').eq(ind).css({
+            'color': color_value,
+            'font-size': font_size_value,
+        });
+    });
+    </script>
+</head>
+<body>
+    <ul>
+        <li>hello world</li>
+        <li>hello world</li>
+        <li>hello world</li>
+        <li style="color:green; font-size:20px;">hello world</li>
+    </ul>
+    <ul>
+        <li>hello world</li>
+        <li>hello world</li>
+        <li>hello world</li>
+        <li>hello world</li>
+    </ul>
+</body>
+</html>

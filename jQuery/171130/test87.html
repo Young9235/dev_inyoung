@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>quiz87</title>
+    <script src="./js/jquery-3.2.1.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        var css_attr = ['background','color','font-size'];
+        var color_v = ['red', 'pink', 'black', 'orange'];
+        var font_size = 20;
+        $('ul li').each(function(index){
+            if(index == 2 ){
+                $(this).css(css_attr[index], font_size);
+            }else if(index < 2){
+                $(this).css(css_attr[index], color_v[index]);
+            }else{
+            }
+        });
+    });
+    </script>
+</head>
+<body>
+    <ul>
+        <li>hello world</li>
+        <li>hello world</li>
+        <li>hello world</li>
+        <li>hello world</li>
+    </ul>
+</body>
+</html>
