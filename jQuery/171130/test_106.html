@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>quiz106</title>
+    <style>
+        .focus{
+            border:3px solid red;
+        }
+
+    </style>
+    <script src="./js/jquery-3.2.1.min.js"></script>
+    <script>
+    $(document).ready(function() {
+		$('input').focus(function(event){
+			$(this).addClass('focus');
+		});
+    });
+    </script>
+</head>
+<body>
+<form>
+    <fieldset>
+        <label for="name">이름<input type="text" id="name" name="name" /></label><br><br>
+        <label for="mail">이메일<input type="email" id="mail" name="mail" /></label><br><br>
+        <label for="password">패스워드<input type="password" id="password" name="password" /></label><br><br>
+        <textarea>의견을 남겨주세요</textarea><br><br>
+    </fieldset>
+</form>
+</body>
+</html>

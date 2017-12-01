@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{border:1px solid black; padding:10px;}
+
+    </style>
+    <script src="./js/jquery-3.2.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('div').click(function(event){
+                $(this).css('background','pink');
+                event.stopPropagation();                //이벤트의 버블링(Propagation:번식,증식) 막기
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="one">1
+        <div id="two">2
+           <div id="three">3
+               <div id="four">4</div>
+           </div>
+        </div>
+    </div>
+
+
+
+</body>
+</html>

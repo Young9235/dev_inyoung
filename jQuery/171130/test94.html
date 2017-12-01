@@ -12,12 +12,13 @@
     <script>
     $(document).ready(function() {
 
-        $('.select0').before($('<li>item1</li>'))
+        //$('.select0').before($('<li>item1</li>'))
 
-        //for(var i=1; i < 4; i++){
-            //var $il = $('<li>item' + i + '</li>');
-            //$il.insertBefore($('.select0'));
-        //}
+        for(var i=1; i < 4; i++){
+            var $il = $('<li>item' + i + '</li>');
+            $il.addClass('select' + i);
+            $('.select' + (i-1)).before($il);
+        }
     });
     </script>
 </head>

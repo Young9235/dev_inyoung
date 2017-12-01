@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>quiz115</title>
+    <style>
+        nav div{
+            width:100px;
+            height:100px;
+            background:pink;
+            float:left;
+            margin-right: 20px;
+            margin-bottom: 20px;
+        }
+    </style>
+    <script src="./js/jquery-3.2.1.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        var a = 4;
+        $('#add').on('click', function(){
+            $('nav').append($('<div>'+a+'</div>'));
+            a++;
+        });
+
+        $('#del').on('click', function(){
+            $('nav div').first().remove();
+            a = 0;
+            if(a < 1){
+                a++;
+            }
+        });
+
+        $('#remove').on('click', function(){
+            $('#add').off('click');
+            $('#del').off('click');
+        });
+    });
+    </script>
+</head>
+<body>
+<button id="add">추가</button>
+<button id="del">삭제</button>
+<button id="remove">이벤트 없앰</button>
+<nav>
+    <div>0</div>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+</nav>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>quiz110</title>
+    <style>
+        div ul li{
+            border:1px solid red;
+
+        }
+        nav ul{
+            list-style-type: none;
+            overflow: hidden;
+        }
+        nav ul li{
+            margin-right: 20px;
+            display:inline-block;
+        }
+
+    </style>
+    <script src="./js/jquery-3.2.1.min.js"></script>
+    <script>
+
+    $(document).ready(function() {
+
+        var color = ['pink', 'blue'];
+        var a = 6;
+        $('#add').click(function (event) {
+			$('div ul').append($('<li>menu'+a+'</li>'));
+			a=a+1
+        });
+
+        $('#remove').click(function (event) {
+            $('div ul li').last().remove();
+            a=a-1;
+            if(a < 1){
+                a=a+1;
+            }
+        });
+
+        var b = 0;
+        $('#change').click(function (event) {
+            if(b == 1){
+                $('div ul').css('background', color[1]);
+                b = 0;
+            }
+            else if(b == 0){
+                $('div ul').css('background', color[0]);
+                b = 1;
+            }
+        });
+
+    });
+    </script>
+</head>
+<body>
+<nav>
+    <ul>
+        <li><p id="add">추가</p></li>
+        <li><p id="remove">삭제</p></li>
+        <li><p id="change">변경</p></li>
+    </ul>
+</nav>
+<div>
+    <ul>
+        <li>menu1</li>
+        <li>menu2</li>
+        <li>menu3</li>
+        <li>menu4</li>
+        <li>menu5</li>
+    </ul>
+</div>
+</body>
+</html>

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>quiz95</title>
+    <title>quiz96</title>
     <style>
         .menu li{
             border:1px solid black;
@@ -11,7 +11,7 @@
     <script src="./js/jquery-3.2.1.min.js"></script>
     <script>
     $(document).ready(function() {
-        $('li:eq(3)').before($('li:eq(4)'));
+        $('li:eq(4)').insertBefore($('.select'));
     });
     </script>
 </head>
@@ -19,7 +19,7 @@
     <ul class="menu">
         <li>menu1</li>
         <li>menu2</li>
-        <li>menu3</li>
+        <li class="select">menu3</li>
         <li>menu4</li>
         <li>menu5</li>
         <li>menu6</li>

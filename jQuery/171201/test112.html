@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>quiz112</title>
+    <style>
+        nav div{
+            width:100px;
+            height:100px;
+            background:pink;
+            float:left;
+            margin-right: 20px;
+        }
+    </style>
+    <script src="./js/jquery-3.2.1.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        $('ul').on('click', 'li', function(event){
+            //$(this).append($('<li>추가된 아이템</li>'));
+            var a = $(this).index()
+            //console.log(a);
+            for(var i=0; i<a+1; i=i+1){
+                $('ul').append($('<li>추가된 아이템</li>'));
+            }
+        });
+    });
+    </script>
+</head>
+<body>
+    <ul>
+        <li>menu</li>
+        <li>menu</li>
+        <li>menu</li>
+        <li>menu</li>
+    </ul>
+</body>
+</html>

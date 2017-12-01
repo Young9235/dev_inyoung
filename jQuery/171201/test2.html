@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./js/jquery-3.2.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('ul').click(function(e){
+                var event = jQuery.Event("style-change");
+                event.bgColor = "#090909";
+                event.color = "white";
+                $(this).children('li').eq(0).trigger(event);
+            });
+            $('ul li').on('style-change', function(e){
+                $(this).css('background', e.bgColor);
+                $(this).css('color', e.color);
+            });
+        });
+    </script>
+</head>
+<body>
+    <ul>
+        <li>hello world</li>
+        <li>hello world</li>
+        <li>hello world</li>
+        <li>hello world</li>
+    </ul>
+</body>
+</html>

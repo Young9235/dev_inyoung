@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        nav div{
+            width:100px;
+            height:100px;
+            background:black;
+            float:left;
+            margin-right: 20px;
+        }
+    </style>
+    <script src="./js/jquery-3.2.1.min.js"></script>
+    <script>
+    var event_list = ['click', 'mouseenter', 'mouseleave', 'dblclick'];
+    var color = ['pink', 'yellow', 'orange', 'green'];
+    $(document).ready(function() {
+        $('nav div').each(function(index){
+            $('div').eq(0).on(event_list[0], function(event){
+                $(this).css('background', color[0]);
+            });
+
+            $('div').eq(1).on(event_list[1], function(event){
+                $(this).css('background', color[1]);
+            });
+
+            $('div').eq(2).on(event_list[2], function(event){
+                $(this).css('background', color[2]);
+            });
+
+            $('div').eq(3).on(event_list[3], function(event){
+                $(this).css('background', color[3]);
+            });
+
+        });
+    });
+    </script>
+</head>
+<body>
+    <nav>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </nav>
+</body>
+</html>

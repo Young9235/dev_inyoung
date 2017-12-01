@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>quiz118</title>
+    <style>
+        nav div{
+            width:100px;
+            height:100px;
+            background:pink;
+            float:left;
+            margin-right: 20px;
+            margin-bottom: 20px;
+        }
+    </style>
+    <script src="./js/jquery-3.2.1.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        $('#right').on('click', function(){
+
+        if(a == 1){
+            $('#move').before($('div:eq()'));
+        }
+
+        });
+    });
+    </script>
+</head>
+<body>
+<button id="right">우로 이동</button>
+<button id="left">좌로 이동</button>
+<nav>
+    <div id="move">0</div>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+</nav>
+</body>
+</html>

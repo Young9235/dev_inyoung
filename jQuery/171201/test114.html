@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>quiz114</title>
+    <style>
+        nav div{
+            width:100px;
+            height:100px;
+            background:pink;
+            float:left;
+            margin-right: 20px;
+        }
+    </style>
+    <script src="./js/jquery-3.2.1.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        $('nav div').on('click', function(e){
+           $(this).css('background', 'green');
+        });
+        $('nav div').mouseenter(function(event){
+            $(this).text('hello');
+            $(this).trigger('click');
+        })
+    });
+    </script>
+</head>
+<body>
+<nav>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</nav>
+</body>
+</html>

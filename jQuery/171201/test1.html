@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./js/jquery-3.2.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            /*
+            $('ul li').mouseenter(function(event){
+                $(this).css('color','red');
+            });
+            */
+
+            $('ul').click(function(event){
+                $(this).append($('<li>추가된 리스트</li>'));
+            });
+            $('ul').on('mouseenter', 'li', function(event){
+                $(this).css('color','red');
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <ul>
+        <li>hello world</li>
+        <li>hello world</li>
+        <li>hello world</li>
+        <li>hello world</li>
+    </ul>
+</body>
+</html>

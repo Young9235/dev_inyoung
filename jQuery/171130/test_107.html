@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>quiz107</title>
+    <style>
+        .focus{
+            border:3px solid red;
+        }
+
+    </style>
+    <script src="./js/jquery-3.2.1.min.js"></script>
+    <script>
+
+    $(document).ready(function() {
+		$('input').eq(0).focus(function(event){
+			$(this).addClass('focus');
+			$(this).after($('<span>영문으로 입력하시오</span>'));
+		});
+		$('input').eq(0).blur(function(event){
+			$(this).removeClass('focus');
+			$('span').remove();
+		});
+    });
+    </script>
+</head>
+<body>
+<form>
+    <fieldset>
+        <label for="name">이름<input type="text" id="name" name="name" /></label><br><br>
+        <label for="mail">이메일<input type="email" id="mail" name="mail" /></label><br><br>
+        <label for="password">패스워드<input type="password" id="password" name="password" /></label><br><br>
+        <textarea>의견을 남겨주세요</textarea><br><br>
+    </fieldset>
+</form>
+</body>
+</html>
