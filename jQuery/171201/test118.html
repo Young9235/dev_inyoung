@@ -16,13 +16,44 @@
     <script src="./js/jquery-3.2.1.min.js"></script>
     <script>
     $(document).ready(function() {
+        var count = 0;
         $('#right').on('click', function(){
-
-        if(a == 1){
-            $('#move').before($('div:eq()'));
-        }
-
+            if(count < 1){
+                $('#move').before($('div:eq(1)'));
+                count++;
+            }
+            else if(count < 2){
+                $('nav').prepend($('div:eq(2)'));
+                count++;
+            }
+            else if(count < 3){
+                $('nav').prepend($('div:eq(3)'));
+                count++;
+            }
+            else{
+                alert('가장 오른쪽에 위치해 있습니다.');
+            }
         });
+
+        var count2 = 0;
+        $('#left').on('click', function(){
+            if(count2 < 1){
+                $('nav').append($('div:eq(2)'));
+                count2++;
+            }
+            else if(count2 < 2){
+                $('nav').append($('div:eq(1)'));
+                count2++;
+            }
+            else if(count2 < 3){
+                $('nav').append($('div:eq(0)'));
+                count2++;
+            }
+            else{
+                alert('가장 왼쪽에 위치해 있습니다.');
+            }
+        });
+
     });
     </script>
 </head>

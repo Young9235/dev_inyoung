@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>quiz119</title>
+    <style>
+        .pink{
+            background : pink;
+        }
+    </style>
+    <script src="./js/jquery-3.2.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var state_index;
+
+            $('ul').on('click','li',function(e){
+                $(this).css('background','pink');
+                state_index = $(this).index();
+            });
+
+            $('#add').on('click', function(e){
+                if(state_index >= 0){
+                    $('ul li').eq(state_index).after($('<li>추가된 아이템</li>'));
+                    $('ul li').css('background','none');
+                    state_index = -1;
+                }
+                else{
+                    alert('선택되지 않았습니다.');
+                }
+            });
+
+            $('#del').on('click', function(e){
+                if(state_index >= 0){
+                    $('ul li').eq(state_index).remove();
+                    state_index = -1;
+                }
+                else{
+                    alert('선택되지 않았습니다.');
+                }
+            });
+
+        });
+    </script>
+</head>
+<body>
+<button id="add">추가</button>
+<button id="del">삭제</button>
+<ul>
+    <li>menu0</li>
+    <li>menu1</li>
+    <li>menu2</li>
+    <li>menu3</li>
+</ul>
+</body>
+</html>
