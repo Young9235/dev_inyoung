@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>accordion</title>
+    <style>
+    .contents{
+        width:50%;
+    }
+    .header-content{
+        background-color:lightseagreen;
+        color: white;
+        padding: 10px;
+        border-radius: 10px 0 0 0;
+        margin-bottom: 2px;
+    }
+
+    .select{
+        background-color:white;
+        color: black;
+        border: 1px solid lightseagreen;
+        border-bottom:none;
+        font-weight:900;
+    }
+
+    .content{
+        border: 1px solid lightseagreen;
+        padding:10px;
+        margin-bottom: 2px;
+        display:none;
+    }
+    .content h1{
+        margin-top: 5px;
+    }
+
+    </style>
+    <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+    <script>
+    $(document).ready(function(){
+        var select_index;
+
+        $('.header-content').eq(0).on('click', function(e){
+            //select_index = $(this).index();
+            //console.log(select_index);
+            $('.content').eq(0).show();
+            $('.content').eq(1).hide();
+            $('.content').eq(2).hide();
+            $('.content').eq(3).hide();
+            $('.content').eq(4).hide();
+        });
+        $('.header-content').eq(1).on('click', function(e){
+            $('.content').eq(1).show();
+            $('.content').eq(0).hide();
+            $('.content').eq(2).hide();
+            $('.content').eq(3).hide();
+            $('.content').eq(4).hide();
+
+        });
+        $('.header-content').eq(2).on('click', function(e){
+            $('.content').eq(2).show();
+            $('.content').eq(0).hide();
+            $('.content').eq(1).hide();
+            $('.content').eq(3).hide();
+            $('.content').eq(4).hide();
+        });
+        $('.header-content').eq(3).on('click', function(e){
+            $('.content').eq(3).show();
+            $('.content').eq(0).hide();
+            $('.content').eq(1).hide();
+            $('.content').eq(2).hide();
+            $('.content').eq(4).hide();
+        });
+        $('.header-content').eq(4).on('click', function(e){
+            $('.content').eq(4).show();
+            $('.content').eq(0).hide();
+            $('.content').eq(1).hide();
+            $('.content').eq(2).hide();
+            $('.content').eq(3).hide();
+        });
+
+    });
+    </script>
+</head>
+<body>
+<div class="contents">
+
+    <div class="header-content">item1</div>
+
+    <div class="content">
+        <h1>Google</h1>
+        <p>
+                때에, 곳이 방황하였으며, 사랑의 너의 것이다.보라, 것이다.
+                영원히 못할 것은 청춘 것은 그림자는 사막이다.
+                청춘을 대중을 그들에게 들어 트고,
+                실로 예가 날카로우나 그들을 봄바람이다.
+                가치를 것이 발휘하기 아니한 생의 인류의 이상은 청춘 철환하였는가?
+                그것은 청춘의 살았으며, 주는 간에 석가는 기쁘며,
+                청춘에서만 속에 것이다. 어디 없으면, 크고 눈에 얼마나 맺어, 끓는다.
+                역사를 같으며, 튼튼하며, 평화스러운 길지 위하여 청춘의 끝까지 때문이다.
+                피가 같은 듣기만 작고 살 이것은 얼마나 이것이다.
+                노래하며 이상의 창공에 끓는 용기가 안고, 두기 칼이다.
+                사라지지 능히 살 청춘의 부패를 가지에 봄바람을 가슴이 그리하였는가?
+        </p>
+    </div>
+
+    <div class="header-content">item2</div>
+
+    <div class="content">
+        <h1>Facebook</h1>
+        <p>
+                때에, 곳이 방황하였으며, 사랑의 너의 것이다.보라, 것이다.
+                영원히 못할 것은 청춘 것은 그림자는 사막이다.
+                청춘을 대중을 그들에게 들어 트고,
+                실로 예가 날카로우나 그들을 봄바람이다.
+                가치를 것이 발휘하기 아니한 생의 인류의 이상은 청춘 철환하였는가?
+                그것은 청춘의 살았으며, 주는 간에 석가는 기쁘며,
+                청춘에서만 속에 것이다. 어디 없으면, 크고 눈에 얼마나 맺어, 끓는다.
+                역사를 같으며, 튼튼하며, 평화스러운 길지 위하여 청춘의 끝까지 때문이다.
+                피가 같은 듣기만 작고 살 이것은 얼마나 이것이다.
+                노래하며 이상의 창공에 끓는 용기가 안고, 두기 칼이다.
+                사라지지 능히 살 청춘의 부패를 가지에 봄바람을 가슴이 그리하였는가?
+        </p>
+    </div>
+
+    <div class="header-content">item3</div>
+
+    <div class="content">
+        <h1>Pinterest</h1>
+        <p>
+                때에, 곳이 방황하였으며, 사랑의 너의 것이다.보라, 것이다.
+                영원히 못할 것은 청춘 것은 그림자는 사막이다.
+                청춘을 대중을 그들에게 들어 트고,
+                실로 예가 날카로우나 그들을 봄바람이다.
+                가치를 것이 발휘하기 아니한 생의 인류의 이상은 청춘 철환하였는가?
+                그것은 청춘의 살았으며, 주는 간에 석가는 기쁘며,
+                청춘에서만 속에 것이다. 어디 없으면, 크고 눈에 얼마나 맺어, 끓는다.
+                역사를 같으며, 튼튼하며, 평화스러운 길지 위하여 청춘의 끝까지 때문이다.
+                피가 같은 듣기만 작고 살 이것은 얼마나 이것이다.
+                노래하며 이상의 창공에 끓는 용기가 안고, 두기 칼이다.
+                사라지지 능히 살 청춘의 부패를 가지에 봄바람을 가슴이 그리하였는가?
+        </p>
+    </div>
+
+    <div class="header-content">item4</div>
+
+    <div class="content">
+        <h1>twitter</h1>
+        <p>
+                때에, 곳이 방황하였으며, 사랑의 너의 것이다.보라, 것이다.
+                영원히 못할 것은 청춘 것은 그림자는 사막이다.
+                청춘을 대중을 그들에게 들어 트고,
+                실로 예가 날카로우나 그들을 봄바람이다.
+                가치를 것이 발휘하기 아니한 생의 인류의 이상은 청춘 철환하였는가?
+                그것은 청춘의 살았으며, 주는 간에 석가는 기쁘며,
+                청춘에서만 속에 것이다. 어디 없으면, 크고 눈에 얼마나 맺어, 끓는다.
+                역사를 같으며, 튼튼하며, 평화스러운 길지 위하여 청춘의 끝까지 때문이다.
+                피가 같은 듣기만 작고 살 이것은 얼마나 이것이다.
+                노래하며 이상의 창공에 끓는 용기가 안고, 두기 칼이다.
+                사라지지 능히 살 청춘의 부패를 가지에 봄바람을 가슴이 그리하였는가?
+        </p>
+    </div>
+
+    <div class="header-content">item5</div>
+
+    <div class="content">
+        <h1>path</h1>
+        <p>
+                때에, 곳이 방황하였으며, 사랑의 너의 것이다.보라, 것이다.
+                영원히 못할 것은 청춘 것은 그림자는 사막이다.
+                청춘을 대중을 그들에게 들어 트고,
+                실로 예가 날카로우나 그들을 봄바람이다.
+                가치를 것이 발휘하기 아니한 생의 인류의 이상은 청춘 철환하였는가?
+                그것은 청춘의 살았으며, 주는 간에 석가는 기쁘며,
+                청춘에서만 속에 것이다. 어디 없으면, 크고 눈에 얼마나 맺어, 끓는다.
+                역사를 같으며, 튼튼하며, 평화스러운 길지 위하여 청춘의 끝까지 때문이다.
+                피가 같은 듣기만 작고 살 이것은 얼마나 이것이다.
+                노래하며 이상의 창공에 끓는 용기가 안고, 두기 칼이다.
+                사라지지 능히 살 청춘의 부패를 가지에 봄바람을 가슴이 그리하였는가?
+        </p>
+    </div>
+</div>
+</body>
+</html>

@@ -19,6 +19,7 @@
             display:inline-block;
             line-height: 35px;
         }
+
         .hover{
             background-color:pink;
             border: 1px solid black;
@@ -51,6 +52,7 @@
                 'height':'60px',
             },400);
             $(this).addClass('hover')
+
         }, function(event){
             $(this).removeClass('hover')
             $(this).animate({
@@ -59,43 +61,28 @@
             },400);
         });
 
-        var select_index = 0;
-        $('.menuitem1').on('click', function(e){
-            $(this).addClass('select');
-            $('.content').eq(0).nextAll().hide();
-            $('.content').eq(0).show().addClass('select');
-            $('.menuitem1').nextAll().removeClass('select');
+
+        var select_index;
+        $('ul').on('click', 'li', function(e){
+            select_index = $(this).index();
+            $('li').eq(select_index).addClass('select');
+            $('.content').eq(select_index).show().addClass('select');
+            $('.content').eq(select_index).nextAll().hide();
+            $('.content').eq(select_index).prevAll().hide();
+            $('li').eq(select_index).prevAll().removeClass('select');
+            $('li').eq(select_index).nextAll().removeClass('select');
+
         });
-        $('.menuitem2').on('click', function(e){
-            $(this).addClass('select');
-            $('.content').eq(1).show().addClass('select');
-            $('.content').eq(1).nextAll().hide();
-            $('.content').eq(1).prevAll().hide();
-            $(this).prevAll().removeClass('select');
-            $(this).nextAll().removeClass('select');
+
+        $('ul li').hover(function(e){
+            $(this).addClass('hover');
+            $(this).removeClass('select');
+        }, function(e){
+            $('ul li').eq(select_index).addClass('select');
+            $(this).removeClass('hover');
         });
-        $('.menuitem3').on('click', function(e){
-            $(this).addClass('select');
-            $('.content').eq(2).show().addClass('select');
-            $('.content').eq(2).nextAll().hide();
-            $('.content').eq(2).prevAll().hide();
-            $(this).prevAll().removeClass('select');
-            $(this).nextAll().removeClass('select');
-        });
-        $('.menuitem4').on('click', function(e){
-            $(this).addClass('select');
-            $('.content').eq(3).show().addClass('select');
-            $('.content').eq(3).nextAll().hide();
-            $('.content').eq(3).prevAll().hide();
-            $(this).prevAll().removeClass('select');
-            $(this).nextAll().removeClass('select');
-        });
-        $('.menuitem5').on('click', function(e){
-            $(this).addClass('select');
-            $('.content').eq(4).show().addClass('select');
-            $('.content').eq(4).prevAll().hide();
-            $(this).prevAll().removeClass('select');
-        });
+
+
     });
 
     </script>
