@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>tooltip</title>
+    <style>
+    ul{
+        list-style:none;
+    }
+    li{
+        font-size: 30px;
+        display:inline-block;
+        background-color: lightseagreen;
+        margin:20px;
+        padding: 20px;
+    }
+
+    .balloon{
+        background-color: bisque;
+        color: #333;
+        padding: 10px;
+        position: absolute;
+        display:none;
+        z-index:100;
+    }
+
+    </style>
+    <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+    <script>
+
+
+    $(document).ready(function(){
+
+        var el = $('<div></div>');
+        $('body').append(el);
+        $('ul li').mousemove(function(event){
+            var text = $(this).attr('title')
+            el.text(text)
+            el.addClass('balloon')
+            el.css('display','inline')
+            //$('a').attr('href','http://www.daum.net');
+
+            $('body').css('position', 'relative')
+            $('div').css({
+                'position':'absolute',
+                'left' : event.pageX,
+                'top' : event.pageY
+            })
+        })
+
+        $('ul li').mouseleave(function(event){
+            el.hide()
+        })
+    });
+
+    </script>
+</head>
+<body>
+<ul>
+    <!--<li class="showBalloon" title="HTML문서 구조를 작성할 때 사용하는 언어"><a>다음</a></li>-->
+    <li class="showBalloon" title="HTML문서 구조를 작성할 때 사용하는 언어">HTML</li>
+    <li class="showBalloon" title="CSS 스타일링">CSS</li>
+    <li class="showBalloon" title="인터렉티브 기능을 작성할 때 사용">JAVASCRIPT</li>
+    <li class="showBalloon" title="인공지능 기술의 하나">딥러닝</li>
+    <li class="showBalloon" title="임베디드 소프트웨어">사물인터넷</li>
+    <li class="showBalloon" title="HTML문서 구조를 작성할 때 사용하는 언어">HTML</li>
+    <li class="showBalloon" title="CSS 스타일링">CSS</li>
+    <li class="showBalloon" title="인터렉티브 기능을 작성할 때 사용">JAVASCRIPT</li>
+    <li class="showBalloon" title="인공지능 기술의 하나">딥러닝</li>
+    <li class="showBalloon" title="임베디드 소프트웨어">사물인터넷</li>
+</ul>
+</body>
+</html>
