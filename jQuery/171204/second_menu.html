@@ -39,8 +39,24 @@
                 ['submenu4-1', 'submenu4-2', 'submenu4-3'],
                 ['submenu5-1', 'submenu5-2', 'submenu5-3']
             ];
+            var select_index;
+            $('nav ul li').hover(function(event){
+                var select_index = $(this).index()
+               // console.log(select_index)
+                $('li').eq(select_index)
+                $('nav').after($('<ul></ul>'))
+                    $('nav + ul').css({
 
-
+                for(var i=0; i<3; i++){
+                    $('nav + ul').append($('<li>'+sub_list[select_index][i]+'</li>'))
+                    //console.log(i)
+                        'background':'black',
+                        'color':'white',
+                    })
+                }
+            }, function(event){
+                $('nav + ul').remove()
+            })
         });
     </script>
 </head>

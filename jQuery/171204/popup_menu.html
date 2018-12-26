@@ -42,11 +42,31 @@
     <script>
         $(document).ready(function () {
             $('div').on('click', 'a', function(event){
-            $('header, .content').hide();
-            $('body').css({
-                    'background':'pink',
-                })
-            $('body').append($('<ul></ul>'))
+                $('header, .content').hide();
+                $('body').css({
+                        'background':'pink',
+                        //'position':'relative',
+                    });
+                $('.content').after($('<ul><li>menu1</li><li>menu2</li><li>menu3</li><li>menu4</li><li>menu5</li></ul>'));
+                $('ul:last').css({
+                        'width':'10%',
+                        'margin':'0 auto',
+                        'line-height':'4em',
+                        'position':'relative',
+                    });
+                $('ul:last').after($('<h4></h4>'));
+                $('h4').text('close').css({
+                        'position':'absolute',
+                        'top':'20px', 'right':'30px',
+                        'background':'white',
+                        'color':'pink',
+                    });
+            });
+            $('body').on('click', 'h4', function(event){
+                $('header, .content').show()
+                $('ul:last').remove()
+                $('h4').remove()
+                $('body').css('background','white')
             })
         });
     </script>
@@ -66,7 +86,7 @@
         <a href="#">popup menu</a>
     </div>
 </header>
- <div class="content">
+<div class="content">
         <h1>Google</h1>
         <p>
             때에, 곳이 방황하였으며, 사랑의 너의 것이다.보라, 것이다.
@@ -81,6 +101,6 @@
             노래하며 이상의 창공에 끓는 용기가 안고, 두기 칼이다.
             사라지지 능히 살 청춘의 부패를 가지에 봄바람을 가슴이 그리하였는가?
         </p>
-    </div>
+</div>
 </body>
 </html>

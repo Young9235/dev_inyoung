@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>menu</title>
+    <style>
+        ul{
+            list-style: none;
+            padding:0;
+            margin:0;
+        }
+
+        li{
+            width: 200px;
+        }
+
+        li:hover{
+            background:white;
+            color: lightseagreen;
+        }
+
+        header{
+            background-color: lightseagreen;
+            overflow: hidden;
+            width: 100%;
+            height: 50px;
+        }
+
+        nav {
+            height: 100%;
+        }
+
+        nav ul li{
+            padding: 20px 0px;
+        }
+
+        nav > ul > li{
+            float: left;
+            padding: 15px 0px;
+        }
+
+    </style>
+    <script src="./js/jquery-3.2.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            //세번쩨 리스트에 쓰일 문구
+            var third_list1 = [
+                ['해외', '국내', '기타'],
+                ['과학', '무협', '판타지'],
+                ['학원물', '영국', '일본']
+            ];
+
+            $('nav > ul > li').hover(function(event){
+                $(this).find('ul').show().css({
+                    'position':'absolute',
+                    'background':'pink',
+                    'margin-top':'15px',
+                    })
+            }, function(event){
+                $(this).find('ul').hide()
+            });
+
+
+            $('nav > ul > li > ul > li').hover(function(event){
+                var ind = $(this).index()
+                console.log(ind)
+                var select = $('<div></div>')
+                $(this).append(select)
+                $('div').prepend($('<ul></ul>'))
+                $('div ul').html('<li>'+third_list1[0][0]+'</li><li>'+third_list1[0][1]+'</li><li>'+third_list1[0][2]+'</li>')
+                $('div ul').css({
+                    'background':'black',
+                    'position':'absolute',
+                    'left':'200px',
+                    'top':0,
+                    'color':'#fff'
+                    })
+
+            }, function(event){
+                $(this).children('div').remove()
+            });
+            $('nav > ul > li > ul > li:eq(1)').hover(function(event){
+                var select = $('<div></div>')
+                $(this).append(select)
+                $('div').prepend($('<ul></ul>'))
+                $('div ul').html('<li>'+third_list1[1][0]+'</li><li>'+third_list1[1][1]+'</li><li>'+third_list1[1][2]+'</li>')
+                $('div ul').css({
+                    'background':'black',
+                    'position':'absolute',
+                    'left':'200px',
+                    'top':'60px',
+                    'color':'#fff'
+                    })
+
+            }, function(event){
+                $(this).children('div').remove()
+            });
+            $('nav > ul > li > ul > li:eq(2)').hover(function(event){
+                var select = $('<div></div>')
+                $(this).append(select)
+                $('div').prepend($('<ul></ul>'))
+                $('div ul').html('<li>'+third_list1[2][0]+'</li><li>'+third_list1[2][1]+'</li><li>'+third_list1[2][2]+'</li>')
+                $('div ul').css({
+                    'background':'black',
+                    'position':'absolute',
+                    'left':'200px',
+                    'top':'120px',
+                    'color':'#fff'
+                    })
+
+            }, function(event){
+                $(this).children('div').remove()
+            });
+
+                /*
+                for(var i=0; i<3; i++){
+                    var select = $(this).find('ul').prepend($('<li></li>'))
+                    var ind = select.index()
+                    console.log(ind)
+                    $(this).find('ul li').show().css({
+                            'position':'absolute',
+                            'left':'200px',
+                            'top':'0px',
+                            'background':'black',
+                        })
+                }
+                <li>'+i+'</li>
+                */
+
+        });
+    </script>
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li>영화
+                <ul>
+                    <li>공포</li>
+                    <li>sf</li>
+                    <li>멜로</li>
+                </ul>
+            </li>
+            <li>음악
+                <ul>
+                    <li>힙합</li>
+                    <li>발라드</li>
+                    <li>댄스</li>
+                </ul>
+            </li>
+            <li>독서
+                <ul>
+                    <li>소설</li>
+                    <li>논픽션</li>
+                    <li>에세이</li>
+                </ul>
+            </li>
+            <li>운동
+                <ul>
+                    <li>축구</li>
+                    <li>농구</li>
+                    <li>배구</li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+
+</body>
+</html>
